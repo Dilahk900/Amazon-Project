@@ -1,5 +1,7 @@
-  const htmlProduct = document.querySelector('.js-product-container');
-  html = '';
+import {cart} from '../data/cart.js';
+
+const htmlProduct = document.querySelector('.js-product-container');
+  let html = '';
   //----Chargement des produits----//
 products.forEach((product) => {
     html += `
