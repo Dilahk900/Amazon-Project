@@ -69,6 +69,7 @@ document.querySelectorAll('.js-add-to-cart')
     
      let productId = button.dataset.productId;
      let matching;
+     let totalCartItems = 0;
      
     cart.forEach((item) =>{
       if(productId === item.id){
@@ -77,14 +78,19 @@ document.querySelectorAll('.js-add-to-cart')
     });
 
     if(matching){
-      matching.quantity += 1;
+      matching.quantity += 1; 
     } else{
       cart.push({id : productId , quantity : 1});
     }
     
      console.log(cart);
      
-    cartQuantity.innerHTML = cart.length;
+    cart.forEach((item) =>{
+      totalCartItems += item.quantity;
+    });
+
+    cartQuantity.innerHTML = totalCartItems;
+
   });
 });
 
