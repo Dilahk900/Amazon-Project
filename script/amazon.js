@@ -1,4 +1,5 @@
 import {cart} from '../data/cart.js';
+import {cart} from '../data/products.js';
 
 const htmlProduct = document.querySelector('.js-product-container');
   let html = '';
